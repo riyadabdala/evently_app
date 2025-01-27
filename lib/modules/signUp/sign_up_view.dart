@@ -1,12 +1,20 @@
+import 'package:evently/core/utlis/firebase_function.dart';
 import 'package:flutter/material.dart';
-
 import '../../core/constants/app_assets.dart';
 import '../../core/theme/colors_palette.dart';
 import '../../core/widgets/custom_text_field.dart';
 
-class SignUpView extends StatelessWidget {
+class SignUpView extends StatefulWidget {
   const SignUpView({super.key});
 
+  @override
+  State<SignUpView> createState() => _SignUpViewState();
+}
+
+class _SignUpViewState extends State<SignUpView> {
+  final _emailController=TextEditingController();
+  final _nameController=TextEditingController();
+  final _passwordController=TextEditingController();
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
@@ -22,11 +30,13 @@ class SignUpView extends StatelessWidget {
           Image.asset(
             AppAssets.eventlyLogo, height: mediaQuery.size.height * 0.25,),
           CustomFormField(
+            controller: _nameController,
             hintText: "Name",
             prefixIcon: Icons.person,
             color: ColorsPalette.generalGrayColor,
           ),
           CustomFormField(
+            controller: _emailController,
             hintText: "Email",
             prefixIcon: Icons.mail,
             color: ColorsPalette.generalGrayColor,
@@ -34,6 +44,7 @@ class SignUpView extends StatelessWidget {
 
           SizedBox(height: 0.1,),
           CustomFormField(
+            controller: _passwordController,
             isPassword: true,
             maxLines: 1,
             hintText: "Password",
@@ -54,7 +65,11 @@ class SignUpView extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  FirebaseFunctions.createAccount(
+                      _emailController.text,
+                      _emailController.text);
+                },
                 style: ElevatedButton.styleFrom(
                     elevation: 0,
                     backgroundColor: ColorsPalette.primaryColor,

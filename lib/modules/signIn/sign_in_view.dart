@@ -52,7 +52,9 @@ class SignInView extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
-                onPressed: (){},
+                onPressed: (){
+
+                },
                 style: ElevatedButton.styleFrom(
                   elevation: 0,
                   backgroundColor: ColorsPalette.primaryColor,
