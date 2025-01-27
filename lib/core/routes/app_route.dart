@@ -27,11 +27,11 @@ import 'package:flutter/material.dart';
             settings: settings
         );
 
-    // case PagesRouteName.signUp:
-    //   return MaterialPageRoute
-    //     (builder:(context) => SignUpView(),
-    //       settings: settings
-    //   );
+    case PagesRouteName.signUp:
+      return MaterialPageRoute
+        (builder:(context) => SignUpView(),
+          settings: settings
+      );
 
       default:
         return MaterialPageRoute

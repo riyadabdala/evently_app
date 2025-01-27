@@ -7,4 +7,5 @@ class ColorsPalette{
 
   static var appColorIconAndTextFormFiled = Color(0xFF5669FF);
 
+
 }

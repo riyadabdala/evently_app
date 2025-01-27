@@ -8,5 +8,6 @@ abstract class AppAssets{
   static const String lockIcn="assets/icons/lock.png";
   static const String googleIcn="assets/icons/google.png";
   static const String eyeIcn="assets/icons/eye.png";
+  static const String forget="assets/icons/forget.png";
 
 }

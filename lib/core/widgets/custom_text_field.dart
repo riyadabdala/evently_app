@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class CustomFormField extends StatefulWidget {
   final String? labelText;
   final String? hintText;
+  final Color?color;
   final TextEditingController? controller;
   final TextInputType keyboardType;
   final String? Function(String?)? validator;
@@ -17,8 +18,8 @@ class CustomFormField extends StatefulWidget {
   final InputBorder? focusedBorder;
   final bool enabled;
   final EdgeInsetsGeometry? padding;
-  final void Function(String)? onChanged; // خاصية onChanged
-
+  final void Function(String)? onChanged;
+  final dynamic maxLines; // خاصية onChanged
   const CustomFormField({
     Key? key,
     this.labelText,
@@ -35,7 +36,9 @@ class CustomFormField extends StatefulWidget {
     this.focusedBorder,
     this.enabled = true,
     this.padding,
-    this.onChanged,
+    this.onChanged, 
+    this. maxLines,
+    this.color,
   }) : super(key: key);
 
   @override
