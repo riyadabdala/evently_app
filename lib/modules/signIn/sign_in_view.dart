@@ -35,7 +35,9 @@ class SignInView extends StatelessWidget {
           Align(
             alignment: Alignment.centerRight,
             child: TextButton(
-                onPressed:(){},
+                onPressed:(){
+                  Navigator.pushNamed(context,PagesRouteName.forgetPassword);
+                },
                 child: Text("Forget Password?",
                   style: theme.textTheme.titleMedium?.copyWith(
                     color: ColorsPalette.primaryColor,

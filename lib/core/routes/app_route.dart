@@ -1,5 +1,6 @@
 
 import 'package:evently/core/routes/pages_route_name.dart';
+import 'package:evently/modules/forgetPassword/forget_password_view.dart';
 import 'package:evently/modules/onBoarding/onboarding_view.dart';
 import 'package:evently/modules/signIn/sign_in_view.dart';
 import 'package:evently/modules/signUp/sign_up_view.dart';
@@ -32,6 +33,12 @@ import 'package:flutter/material.dart';
         (builder:(context) => SignUpView(),
           settings: settings
       );
+
+      case PagesRouteName.forgetPassword:
+        return MaterialPageRoute
+          (builder:(context) => ForgetPasswordView(),
+            settings: settings
+        );
 
       default:
         return MaterialPageRoute
